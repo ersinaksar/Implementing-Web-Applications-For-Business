@@ -1,0 +1,11 @@
+﻿@model ECommerceApp.Models.Product
+
+<div class="border_box">
+    <div class="product_title"><a href="/Product/Details/@Model.ProductID">@Model.ProductName</a></div>
+    <div class="product_img">
+        <a href="/Product/Details/@Model.ProductID">
+            <img src="~/Content/images/p1.jpg" alt="" border="0" />
+        </a>
+    </div>
+    <div class="prod_price"><span class="price">@string.Format("{0:C}", Model.UnitPrice)</span></div>
+</div>

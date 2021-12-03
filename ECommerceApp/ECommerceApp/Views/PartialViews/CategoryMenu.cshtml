@@ -1,0 +1,15 @@
+﻿@model List<ECommerceApp.Models.Category>
+
+@{
+    int i = 0;
+}
+
+<ul class="left_menu">
+    @foreach (var item in Model)
+    {
+        <li class="@(i % 2 == 0 ? "even":"odd" )">
+            @Html.ActionLink(item.CategoryName, "ProductsByCategory", "Product", new { id = item.CategoryID }, null)
+        </li>
+        i++;
+    }
+</ul>

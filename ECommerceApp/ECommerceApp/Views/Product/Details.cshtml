@@ -1,0 +1,40 @@
+﻿@model ECommerceApp.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="center_title_bar">@Model.ProductName</div>
+<div class="prod_box_big">
+    <div class="center_prod_box_big">
+        <div class="product_img_big">
+            <a href="javascript:popImage('~/Content/images/big_pic.jpg','Some Title')" title="header=[Zoom] body=[&nbsp;] fade=[on]"><img src="~/Content/images/p3.jpg" alt="" border="0" /></a>
+            <div class="thumbs">
+                <a href="#" title="header=[Thumb1] body=[&nbsp;] fade=[on]">
+                    <img src="~/Content/images/thumb1.jpg" alt="" border="0" />
+                </a>
+                <a href="#" title="header=[Thumb2] body=[&nbsp;] fade=[on]">
+                    <img src="~/Content/images/thumb2.jpg" alt="" border="0" />
+                </a>
+                <a href="#" title="header=[Thumb3] body=[&nbsp;] fade=[on]">
+                    <img src="~/Content/images/thumb1.jpg" alt="" border="0" />
+                </a>
+            </div>
+        </div>
+        <div class="details_big_box">
+            <div class="product_title_big">@Model.ProductName</div>
+            <div class="specifications">
+                Available: <span class="blue">
+                    @(Model.UnitsInStock>0?"In stock":"Out of stock")
+                </span><br />
+                Warranties: <span class="blue">24 months</span><br />
+                Unit :<span class="blue"> @Model.QuantityPerUnit</span><br />
+            </div>
+            <div class="prod_price_big">
+                <span class="price">@string.Format("{0:C}", Model.UnitPrice)</span>
+            </div>
+
+            @Html.ActionLink("add to cart", "AddToCart", "ShoppingCart", new { id = Model.ProductID }, new { @class = "prod_buy" })
+        </div>
+    </div>
+</div>

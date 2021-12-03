@@ -1,0 +1,19 @@
+﻿@model List<ECommerceApp.Models.Product>
+@{
+    ViewBag.Title = "ProductsByCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+<div class="prod_box">
+    <div class="center_prod_box">
+        <div class="product_title"><a href="#">@item.ProductName</a></div>
+        <div class="product_img"><a href="#"><img src="~/Content/images/p1.jpg" alt="" border="0" /></a></div>
+        <div class="prod_price"><span class="price">@string.Format("{0:C}", item.UnitPrice)</span></div>
+    </div>
+    <div class="prod_details_tab">
+        @Html.ActionLink("Details", "Details", "Product", new { id = item.ProductID }, new { @class = "prod_details" })
+    </div>
+</div>
+}

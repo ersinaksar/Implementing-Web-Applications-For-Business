@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{DA57D1BC-8006-4B0F-9FC0-5C8A4783A075}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ECommerceApp/Controllers/CategoryController.cs">
+    <Files>
+      <File FileName="ECommerceApp/Controllers/CategoryController.cs" Line="16" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ECommerceApp" expanded="True">
+            <Node name="ECommerceApp" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="CategoryController.cs" selected="True" />
+              </Node>
+              <Node name="Repository" expanded="True">
+                <Node name="Concrete" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ECommerceApp PreferredExecutionTarget="/Applications/Safari.app" />
+</Properties>
