@@ -43,7 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -88,7 +96,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\bann1.jpg" />
+    <Content Include="Content\images\bann2.jpg" />
+    <Content Include="Content\images\banner728.jpg" />
+    <Content Include="Content\images\bar_bg.gif" />
+    <Content Include="Content\images\bg.jpg" />
+    <Content Include="Content\images\big_pic.jpg" />
+    <Content Include="Content\images\csscreme.jpg" />
+    <Content Include="Content\images\de.gif" />
+    <Content Include="Content\images\en.gif" />
+    <Content Include="Content\images\footer_bg.gif" />
+    <Content Include="Content\images\footer_logo.png" />
+    <Content Include="Content\images\header_bg.jpg" />
+    <Content Include="Content\images\link_bg.gif" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\menu_bg.gif" />
+    <Content Include="Content\images\menu_divider.gif" />
+    <Content Include="Content\images\menu_title_bg.gif" />
+    <Content Include="Content\images\navbullet.png" />
+    <Content Include="Content\images\p1.jpg" />
+    <Content Include="Content\images\p1.png" />
+    <Content Include="Content\images\p2.jpg" />
+    <Content Include="Content\images\p3.jpg" />
+    <Content Include="Content\images\p4.jpg" />
+    <Content Include="Content\images\p5.jpg" />
+    <Content Include="Content\images\p6.jpg" />
+    <Content Include="Content\images\p7.jpg" />
+    <Content Include="Content\images\payment.gif" />
+    <Content Include="Content\images\shoppingcart.png" />
+    <Content Include="Content\images\slider_bg.gif" />
+    <Content Include="Content\images\thumb1.jpg" />
+    <Content Include="Content\images\thumb2.jpg" />
+    <Content Include="Content\js\boxOver.js" />
+    <Content Include="Content\styles\iecss.css" />
+    <Content Include="Content\styles\style.css" />
     <Content Include="Global.asax" />
+    <Content Include="Models\NorthwindModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>NorthwindModels.Context.cs</LastGenOutput>
+      <DependentUpon>NorthwindModels.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\NorthwindModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NorthwindModels.edmx</DependentUpon>
+      <LastGenOutput>NorthwindModels.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,11 +148,67 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bolge.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bolgeler.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Kategoriler.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MusteriDemographic.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Musteriler.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Nakliyeciler.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NorthwindModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NorthwindModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NorthwindModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personeller.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Satislar.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Satis_Detaylari.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tedarikciler.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Urunler.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <EntityDeploy Include="Models\NorthwindModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NorthwindModels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\NorthwindModels.edmx.diagram">
+      <DependentUpon>NorthwindModels.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,7 +219,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
